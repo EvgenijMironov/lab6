@@ -16,7 +16,7 @@ namespace lab6 {
             get { return name; }
         }
         public virtual void search() {
-            Console.WriteLine("Class Aprent");
+            Console.WriteLine("Class Parent");
         }
     }
 
@@ -49,18 +49,18 @@ namespace lab6 {
         }
         static DateTime getDate() {
             int d, m, y;
-            Console.Write("День: ");
             do {
-                d = Convert.ToInt16(Console.ReadLine());
-            } while (d >= 1 && d <= 31);
-            Console.Write("Месяц: ");
+                Console.Write("День: ");
+                d = Convert.ToInt32(Console.ReadLine());
+            } while (d < 1 || d > 31);
             do {
-                m = Convert.ToInt16(Console.ReadLine());
-            } while (m >= 1 && m <= 12);
-            Console.Write("Год: ");
+                Console.Write("Месяц: ");
+                m = Convert.ToInt32(Console.ReadLine());
+            } while (m < 1 || m > 12);
             do {
-                y = Convert.ToInt16(Console.ReadLine());
-            } while (y >= 1 && y <= 2019);
+                Console.Write("Год: ");
+                y = Convert.ToInt32(Console.ReadLine());
+            } while (y < 1 || y > 2019);
             return DateTime.Parse($"{d}.{m}.{y}");
         }
         static void Main(string[] args) {
@@ -74,24 +74,22 @@ namespace lab6 {
                     Console.Write("Цена: ");
                     float price = Convert.ToSingle(Console.ReadLine());
                     Console.Write("Условия хранения: ");
-                    bool special = Convert.ToBoolean(Console.ReadLine());
+                    bool special = Convert.ToBoolean(Convert.ToInt32(Console.ReadLine()));
                     Console.WriteLine("Срок годности");
                     products.Add(new Household(name,price, special, getDate()));            
-                }
-                else if (t == "п") {
+                } else if (t == "п") {
                     Console.Write("Название: ");
                     string name = Console.ReadLine();
                     Console.Write("Цена: ");
                     float price = Convert.ToSingle(Console.ReadLine());
                     Console.WriteLine("Дата реализации");
                     products.Add(new Food(name, price, getDate()));
-                }
-                else {
+                } else {
                     Console.WriteLine("ОШИБКА");
                     i--;
-                }
+                } Console.WriteLine();
             }
-            Console.WriteLine("Товары введены");
+            Console.WriteLine("ТОВАРЫ ВНЕСЕНЫ");
 
             Console.Write("Введите название искомого товара: ");
             string temp = Console.ReadLine();
