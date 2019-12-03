@@ -4,76 +4,71 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab6
-{
-    public class product
-    {
+namespace lab6 {
+    public class product {
         protected string name;
         protected float price;
-        public product (string name, float price)
-        {
+        public product (string name, float price) {
             this.name = name;
             this.price = price;
         }
-        public string Name
-        {
+        public string Name {
             get { return name; }
         }
-        public virtual void search()
-        {
+        public virtual void search() {
             Console.WriteLine("Class Aprent");
         }
     }
 
-    class Food : product
-    {
+    class Food : product {
         private DateTime sellDate; //Дата реализации
-        public Food (string name, float price, DateTime sellDate) : base (name, price)
-        {
+        public Food (string name, float price, DateTime sellDate) : base (name, price) {
             this.sellDate = sellDate;
         }
-        public override void search()
-        {
+        public override void search() {
             Console.WriteLine($"Название: {name}, цена: {price}, дата реализации: {sellDate}");
         }
     }
 
-    class Household : product
-    {
+    class Household : product {
         private Boolean special; //Особые условия хранения
         private DateTime wPeriod; //Гарантийный срок
-        public Household (string name, float price, Boolean special, DateTime wPeriod) : base(name, price)
-        {
+        public Household (string name, float price, Boolean special, DateTime wPeriod) : base(name, price) {
             this.special = special;
             this.wPeriod = wPeriod;
         }
-        public override void search()
-        {
-            Console.WriteLine($"Название: {name}, цена: {price}, особые условия хранения: {special}, Срок годности: {wPeriod}");
-            
+        public override void search() {
+            Console.WriteLine($"Название: {name}, цена: {price}, особые условия хранения: {special}, Срок годности: {wPeriod}");         
         }
     }
 
-    class Program
-    {
-        static void search(List <product>temp, string name)
-        {
+    class Program {
+        static void search(List <product>temp, string name) {
             foreach (product t in temp)
-            {
-                if (name == t.Name)
-                    t.search();
-            }
+                if (name == t.Name) t.search();
         }
-        static void Main(string[] args)
-        {
-
+        static DateTime getDate() {
+            int d, m, y;
+            Console.Write("День: ");
+            do {
+                d = Convert.ToInt16(Console.ReadLine());
+            } while (d >= 1 && d <= 31);
+            Console.Write("Месяц: ");
+            do {
+                m = Convert.ToInt16(Console.ReadLine());
+            } while (m >= 1 && m <= 12);
+            Console.Write("Год: ");
+            do {
+                y = Convert.ToInt16(Console.ReadLine());
+            } while (y >= 1 && y <= 2019);
+            return DateTime.Parse($"{d}.{m}.{y}");
+        }
+        static void Main(string[] args) {
             List<product> products = new List<product>();
             Console.Write("Введите количество товаров: "); int n = Convert.ToInt16(Console.ReadLine());
-            for (int  i = 0;  i < n;  i++)
-            {
+            for (int  i = 0;  i < n;  i++) {
                 Console.Write("Хозяйсвтенный или продуктовый товар? (х/п): "); string t = Console.ReadLine();
-                if (t == "х")
-                {
+                if (t == "х") {
                     Console.Write("Название: ");
                     string name = Console.ReadLine();
                     Console.Write("Цена: ");
@@ -81,37 +76,27 @@ namespace lab6
                     Console.Write("Условия хранения: ");
                     bool special = Convert.ToBoolean(Console.ReadLine());
                     Console.WriteLine("Срок годности");
-                    Console.Write("День: "); int d = Convert.ToInt16(Console.ReadLine());
-                    Console.Write("Месяц: "); int m = Convert.ToInt16(Console.ReadLine());
-                    Console.Write("Год: "); int y = Convert.ToInt16(Console.ReadLine());
-                    products.Add(new Household(name,price, special, DateTime.Parse($"{d}.{m}.{y}")));
-                    
+                    products.Add(new Household(name,price, special, getDate()));            
                 }
-                else if (t == "п")
-                {
+                else if (t == "п") {
                     Console.Write("Название: ");
                     string name = Console.ReadLine();
                     Console.Write("Цена: ");
                     float price = Convert.ToSingle(Console.ReadLine());
                     Console.WriteLine("Дата реализации");
-                    Console.Write("День: "); int d = Convert.ToInt16(Console.ReadLine());
-                    Console.Write("Месяц: "); int m = Convert.ToInt16(Console.ReadLine());
-                    Console.Write("Год: "); int y = Convert.ToInt16(Console.ReadLine());
-                    products.Add(new Food(name, price, DateTime.Parse($"{d}.{m}.{y}")));
+                    products.Add(new Food(name, price, getDate()));
                 }
-                else
-                {
+                else {
                     Console.WriteLine("ОШИБКА");
                     i--;
-
                 }
-
             }
             Console.WriteLine("Товары введены");
+
             Console.Write("Введите название искомого товара: ");
             string temp = Console.ReadLine();
-
             search(products, temp);
+
             Console.ReadKey();
         }
     }
