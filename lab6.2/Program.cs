@@ -1,13 +1,10 @@
 ﻿using System;
 
-namespace lab6._2
-{
-    class Provider
-    {
+namespace lab6._2 {
+    class Provider {
         private string providerName;
         private string[] productName;
         private float[] productPrice;
-
         public Provider(string providerName) {
             this.providerName = providerName;
             Console.Write("Количество продуктов: "); 
@@ -19,14 +16,10 @@ namespace lab6._2
                 Console.Write($"Введите цену {i} продукта: "); productPrice[i] = Convert.ToSingle(Console.ReadLine());
             } Console.WriteLine($"Поставщик {this.providerName} создан");
         }
-
-        public float this[string name]
-        {
-            get
-            {
+        public float this[string name] {
+            get {
                 int index = Array.IndexOf(productName, name);
-                while (index == -1)
-                {
+                while (index == -1) {
                     Console.WriteLine("Нет такого товара!");
                     Console.Write("Цену какого товара вы хотели бы узнать: ");
                     name = Console.ReadLine();
@@ -36,10 +29,8 @@ namespace lab6._2
             }
         }
     }
-    class Program
-    {
-        static void Main(string[] args)
-        {
+    class Program {
+        static void Main(string[] args) {
             Provider A = new Provider("Алексей");
             Console.Write("Цену какого товара вы хотели бы узнать: ");
             string searchName = Console.ReadLine();
