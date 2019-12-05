@@ -12,8 +12,8 @@ namespace lab6._2 {
             productName = new string[productCount];
             productPrice = new float[productCount];
             for (int i = 0; i < productCount; i++) {
-                Console.Write($"Введите название {i} продукта: "); productName[i] = Console.ReadLine();
-                Console.Write($"Введите цену {i} продукта: "); productPrice[i] = Convert.ToSingle(Console.ReadLine());
+                Console.Write($"Введите название {i+1} продукта: "); productName[i] = Console.ReadLine();
+                Console.Write($"Введите цену {i+1} продукта: "); productPrice[i] = Convert.ToSingle(Console.ReadLine());
             } Console.WriteLine($"Поставщик {this.providerName} создан");
         }
         public float this[string name] {
@@ -31,10 +31,11 @@ namespace lab6._2 {
     }
     class Program {
         static void Main(string[] args) {
-            Provider A = new Provider("Алексей");
+            Console.Write("Введите имя поставщика: "); string pName = Console.ReadLine();
+            Provider A = new Provider(pName);
             Console.Write("Цену какого товара вы хотели бы узнать: ");
             string searchName = Console.ReadLine();
-            Console.WriteLine($"Цена {searchName} = {A[searchName]}");
+            Console.WriteLine($"Цена = {A[searchName]}");
             Console.ReadKey();
         }
     }
