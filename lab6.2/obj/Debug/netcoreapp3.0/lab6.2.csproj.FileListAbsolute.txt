@@ -20,3 +20,13 @@ C:\Users\human\Documents\С#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.Assembly
 C:\Users\human\Documents\С#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.AssemblyInfo.cs
 C:\Users\human\Documents\С#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.dll
 C:\Users\human\Documents\С#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.pdb
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\bin\Debug\netcoreapp3.0\lab6.2.exe
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\bin\Debug\netcoreapp3.0\lab6.2.deps.json
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\bin\Debug\netcoreapp3.0\lab6.2.runtimeconfig.json
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\bin\Debug\netcoreapp3.0\lab6.2.runtimeconfig.dev.json
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\bin\Debug\netcoreapp3.0\lab6.2.dll
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\bin\Debug\netcoreapp3.0\lab6.2.pdb
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.AssemblyInfoInputs.cache
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.AssemblyInfo.cs
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.dll
+C:\Users\пк\Desktop\DZ C#\lab6\lab6.2\obj\Debug\netcoreapp3.0\lab6.2.pdb

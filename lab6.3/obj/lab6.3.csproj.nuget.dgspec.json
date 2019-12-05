@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.2\\lab6.2.csproj": {}
+    "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.3\\lab6.3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.2\\lab6.2.csproj": {
+    "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.3\\lab6.3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.2\\lab6.2.csproj",
-        "projectName": "lab6.2",
-        "projectPath": "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.2\\lab6.2.csproj",
+        "projectUniqueName": "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.3\\lab6.3.csproj",
+        "projectName": "lab6.3",
+        "projectPath": "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.3\\lab6.3.csproj",
         "packagesPath": "C:\\Users\\пк\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.2\\obj\\",
+        "outputPath": "C:\\Users\\пк\\Desktop\\DZ C#\\lab6\\lab6.3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

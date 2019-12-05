@@ -60,7 +60,10 @@ namespace lab6._3 {
     class Program {
         static void search(List<Tour> temp, string vName, int days) {
             foreach (Tour t in temp)
-                if (vName == t.VName && days == t.Days) t.getInfo();
+                if (vName == t.VName && days == t.Days) {
+                    t.getInfo(); break;
+                }
+            Console.WriteLine("НЕ НАЙДЕНО!!!!!!!!");
         }
         static void Main(string[] args) {
             List<Tour> t = new List<Tour>();
